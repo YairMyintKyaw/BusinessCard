@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container > div {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.8s;
+}
+.container > div:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+#back,
+#front {
+  backface-visibility: hidden;
+}
+
+#back {
+  transform: rotateY(180deg);
+}
